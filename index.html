@@ -15,36 +15,35 @@
 
 #customers td, #customers th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 8px;  
 }
 
 #customers tr:nth-child(even){background-color: green;}
 
 #customers tr:hover {background-color: greenyellow;}
 
-#customers th {
+#customers th{
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
   background-color: red;
   color: white;
 }
-#next{
-  color: black;  
+#chave{
+  padding: 1px; 
+  margin: 1px;
+  background-color: red;  
   
 }
-#ramdom1, #ramdom2, #ramdom3, #ramdom4,#ramdom5,#ramdom6,#ramdom7,#ramdom8{    
+#ramdom1{    
   font: normal 20pt Arial;
-  color: red;
+  color: red;  
 }
 </style>
 </head>
 <body>
 
 <h1>COPA FIM DA AMIZADE</h1>
-     
-  <button onclick="myFunction()">Sorteio</button>
-  <p id="ramdom1"></p>
 
 <table id="customers">
   <tr>
@@ -54,37 +53,51 @@
     <th>GRANDE FINAL</th>
   </tr>
   <tr>
-    <td style="color: black;"><b><p id="ramdom"></p></b></td>
-    <td id="next"><b>x1</b></td> <!--QUARTAS 1-->
-    <td id="next"><b>x2</b></td> <!--SEMI 1-->
-    <td id="next"><b>x3</b></td> <!--FINAL 1-->
+    <td><p id="chave">CHAVE 1</p></td>
+  </tr>  
+  <tr>
+    <td style="color: black;"><b><p id="ramdom1">PsyKoTiC</p></b></td>
+    <td id="next"><b>CHAVE 1 x CHAVE 3</b></td> <!--QUARTAS 1-->
+    <td id="next"><b></b></td> <!--SEMI 1-->
+    <td id="next"><b></b></td> <!--FINAL 1-->
 
   </tr>
   <tr>
-    <td style="color: black;"><b><p id="ramdom2"></p></b></td>
-    <td id="next"><b>x4</b></td> <!--QUARTAS 2-->
-    <td id="next"><b>x5</b></td> <!--SEMI 2-->
-    <td id="next"><b>x6</b></td> <!--FINAL 2-->
+    <td style="color: black;"></div1><b><p id="ramdom1">DecoJunior</p></b></td>
+    <td id="next"><b></b></td> <!--QUARTAS 2-->
+    <td id="next"><b></b></td> <!--SEMI 2-->
+    <td id="next"><b></b></td> <!--FINAL 2-->
         
+  </tr> 
+  <tr>
+    <td><p id="chave">CHAVE 2</p></td>
   </tr>  
   <tr>      
-    <td style="color: black;"><b><p id="ramdom1"></p></b></td>
-    <td id="next"><b>x7</b></td>  <!--QUARTAS 3-->       
+    <td style="color: black;"><b><p id="ramdom1">VB</p></b></td>
+    <td id="next"><b></b>CHAVE 2 x CHAVE 4</td> <!--QUARTAS 3-->       
   </tr>
   <tr>
-    <td style="color: black;"><b><p id="ramdom1"></p></b></td>
-    <td id="next"><b>x8</b></td>  <!--QUARTAS 4--> 
+    <td style="color: black;"><b><p id="ramdom1">STV</p></b></td>
+    <td id="next"><b></b>  <!--QUARTAS 4-->  
+  </td>
   <tr>
-    <td style="color: black;"><b><p id="ramdom1"></p></b></td>          
+    <td><p id="chave">CHAVE 3</p></td>
+  </tr>  
+
+  <tr>
+    <td style="color: black;"><b><p id="ramdom1">VEOS</p></b></td>          
   </tr>
   <tr>
-    <td style="color: black;"><b><p id="ramdom1"></p></b></td>      
+    <td style="color: black;"><b><p id="ramdom1">BRANDÃO</p></b></td>      
   </tr>
   <tr>
-    <td style="color: black;"><b><p id="ramdom1"></p></b></td>     
+    <td><p id="chave">CHAVE 4</p></td>
+  </tr> 
+  <tr>
+    <td style="color: black;"><b><p id="ramdom1">ASX</p></b></td>     
   </tr>
   <tr>
-    <td style="color: black;"><b><p id="ramdom1"></p></b></td>       
+    <td style="color: black;"><b><p id="ramdom1">PRQT</p></b></td>       
   </tr>
   <tr>
     <th>OITAVAS LOWER</th>
@@ -93,7 +106,7 @@
     <th>FINAL LOWER</th>
   </tr>
   <tr>      
-    <td style="color: black;"><b></b></td>
+    <td style="color: black;"><b>CHAVE 1 x CHAVE 3</b></td>
     <td id="next"><b>x8</b></td> <!--QUARTAS 1-->
     <td id="next"><b>x10</b></td> <!--SEMI 1-->
     <td id="next"><b>x11</b></td> <!--FINAL 1-->     
@@ -104,7 +117,7 @@
     <td id="next"><b>x13</b></td> <!--SEMI 2-->
     <td id="next"><b>x14</b></td> <!--FINAL 2-->   
   <tr>
-    <td style="color: black;"><b></b></td>
+    <td style="color: black;"><b>CHAVE 2 x CHAVE 4</b></td>
     <td id="next"><b>x15</b></td> <!--QUARTAS 3-->      
   </tr>
   <tr>
@@ -114,25 +127,7 @@
 </table>
 
 
-<script>
-    function allowDrop(ev){
-        ev.preventDefault();
-    }
-   function drag(ev){
-       ev.dataTransfer.setData("text", ev.target.id);
-   }
-   function drop(ev){
-       ev.preventDefault();
-       var data = ev.dataTransfer.getData("text");
-       ev.target.appendChild(document.getElementById(data));
-   } 
-
-    const nomes = ["3FPS x","ASX x","VB x", "VEOS x", "DECO x", "STV x", "PSY x", "PRQT x"];                 
-   function myFunction(){                
-        nomes.sort(function(a, b){return 0.5 - Math.random()});
-        document.getElementById("ramdom1").innerHTML = nomes;
-              
-      }
+<script>   
   </script>
 
 </body>
